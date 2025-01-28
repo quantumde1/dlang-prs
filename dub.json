@@ -1,0 +1,17 @@
+{
+	"name": "dlang-prs",
+	"authors": [
+		"Sewer56",
+		"quantumde1"
+	],
+	"description": "Dlang utility for decompressing PRS files from Saturn games.",
+	"copyright": "Copyright © 2019 - Sewer56, 2025 - quantumde1",
+	"license": "GPLV3",
+	"targetName": "prs-decompressor",
+	"dependencies": {
+		"raylib-d": "~>5.5.1"
+	},
+	"libs": [
+		"raylib"
+	]
+}

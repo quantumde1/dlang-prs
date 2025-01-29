@@ -7,11 +7,43 @@
 	"description": "Dlang utility for decompressing PRS files from Saturn games.",
 	"copyright": "Copyright © 2019 - Sewer56, 2025 - quantumde1",
 	"license": "GPLV3",
-	"targetName": "prs-decompressor",
-	"dependencies": {
-		"raylib-d": "~>5.5.1"
-	},
-	"libs": [
-		"raylib"
-	]
+	"subPackages": [
+		{
+			"name": "prs-gui",
+			"sourcePaths": ["source/gui"],
+			"targetName": "prs-decompressor-gui",
+			"lflags-posix": [
+                "-L/usr/lib",
+                "-L.",
+                "-L/opt/local/lib",
+                "-L/usr/local/lib"
+			],
+			"libs-posix": [
+				"raylib",
+			],
+			"libs-windows": [
+				"libraylib"
+			],
+			"dependencies": {
+				"raylib-d": "~>5.5.1"
+			},
+		},
+		{
+			"name": "prs-cli",
+			"sourcePaths": ["source/cli"],
+			"targetName": "prs-decompressor-cli",
+			"lflags-posix": [
+                "-L/usr/lib",
+                "-L.",
+                "-L/opt/local/lib",
+                "-L/usr/local/lib"
+			],
+		},
+		{
+			"name": "prs-lib",
+			"sourcePaths": ["source/prs"],
+			"targetName": "prs",
+			"targetType": "dynamicLibrary"
+		}
+	],
 }

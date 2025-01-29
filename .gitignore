@@ -11,6 +11,8 @@ heaven-engine.dll
 heaven-engine.a
 heaven-engine.lib
 heaven-engine-test-*
+prs-decompressor-gui
+prs-decompressor-cli
 *.exe
 *.pdb
 *.o
